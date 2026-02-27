@@ -41,7 +41,8 @@ namespace BankAccountNS
         /// Этот метод расчитывает дебет.
         /// </summary>
         /// <param name="amount">Число, обозначающее дебет</param>
-        /// <returns>Сумма дебета и баланса</returns>
+        /// <exception cref="ArgumentOutOfRangeException">Выход за пределы диапазона (меньше 0 или больше тек. баланса)</exception>
+        /// <returns>Разность баланса и дебета</returns>
         public void Debit(double amount)
         {
             if (amount > m_balance)
@@ -54,7 +55,7 @@ namespace BankAccountNS
                 throw new ArgumentOutOfRangeException("amount");
             }
 
-            m_balance += amount;
+            m_balance -= amount;
         }
 
         /// <summary>
