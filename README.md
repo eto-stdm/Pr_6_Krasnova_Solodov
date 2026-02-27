@@ -1,4 +1,4 @@
-Описание:<br/>
+## Описание:<br/>
 Данный README-файл написан для проекта 6ой практической работы "СОЗДАНИЕ АВТОМАТИЗИРОВАННЫХ UNIT-ТЕСТОВ Часть 1"<br/> 
 по дисциплине "Поддержка и тестирование программных модулей".<br/>
 
@@ -14,7 +14,7 @@
 Описание архитектуры:<br/>
 Весь проект выполнен на бэкенд части, реализован основной проект Bank и проект для тестов BankTests.<br/>
 
-Структура проекта:
+## Структура проекта:
 ```
 Pr_6_Krasnova_Solodov/
 | ├── Bank/
@@ -32,7 +32,7 @@ Pr_6_Krasnova_Solodov/
 └── Bank.sln
 ```
 
-Основные компоненты:
+## Основные компоненты:
 2 объекта FileName.cs.
 
 ========== BankAccount.cs: ==========
@@ -45,7 +45,7 @@ Pr_6_Krasnova_Solodov/
  - Метод Main() для работы
 
 ========== BankAccountTests.cs: ==========
- - [TestClass] BankAccountTests содержащий юни-тесты
+ - [TestClass] BankAccountTests содержащий юнит-тесты
  - [TestMethod] Debit_WithValidAmount_UpdatesBalance()
  - [TestMethod] Debit_WhenAmountIsLessThanZero_ShouldThrowArgumentOutOfRange()
  - [TestMethod] Debit_WhenAmountIsMoreThanBalance_ShouldThrowArgumentOutOfRange()
@@ -53,8 +53,8 @@ Pr_6_Krasnova_Solodov/
  - [TestMethod] Credit_WhenAmountIsLessThanZero_ShouldThrowArgumentOutOfRange()
 
 
-Взаимодействие:
-Работа со всеми методами происходит в теле метода Main() с использованием функций и методов внутри класса.
+Взаимодействие:<br/>
+Работа со всеми методами происходит в теле метода Main() с использованием функций и методов внутри класса.<br/>
 
-Вывод о проведенном тестировании:
-Все юни-тесты прошли успешно!
+Вывод о проведенном тестировании:<br/>
+Все юнит-тесты прошли успешно!<br/>
