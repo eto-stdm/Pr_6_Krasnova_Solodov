@@ -62,6 +62,7 @@ namespace BankAccountNS
         /// </summary>
         /// <param name="amount">Число, обозначающее кредит</param>
         /// <returns>Сумма дебета и кредита</returns>
+        /// <exception cref="ArgumentOutOfRangeException">Кредит меньше нуля</exception>
         public void Credit(double amount)
         {
             if (amount < 0)
@@ -76,7 +77,7 @@ namespace BankAccountNS
         {
             BankAccount ba = new BankAccount("Mr. Roman Abramovich", 11.99);
 
-            ba.Credit(5.77);
+            ba.Credit(-5.77);
             ba.Debit(11.22);
             Console.WriteLine("Current balance is ${0}", ba.Balance);
             Console.ReadLine();
