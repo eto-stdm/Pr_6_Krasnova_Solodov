@@ -12,22 +12,36 @@ namespace BankAccountNS
 
         private BankAccount() { }
 
+        /// <summary>
+        /// Конструктор.
+        /// </summary>
         public BankAccount(string customerName, double balance)
         {
             m_customerName = customerName;
             m_balance = balance;
         }
 
+        /// <summary>
+        /// Этот метод выводит имя покупателя.
+        /// </summary>
         public string CustomerName
         {
             get { return m_customerName; }
         }
 
+        /// <summary>
+        /// Этот метод выводит баланс.
+        /// </summary>
         public double Balance
         {
             get { return m_balance; }
         }
 
+        /// <summary>
+        /// Этот метод расчитывает дебет.
+        /// </summary>
+        /// <param name="amount">Число, обозначающее дебет</param>
+        /// <returns>Сумма дебета и баланса</returns>
         public void Debit(double amount)
         {
             if (amount > m_balance)
@@ -43,6 +57,11 @@ namespace BankAccountNS
             m_balance += amount;
         }
 
+        /// <summary>
+        /// Этот метод расчитывает кредит.
+        /// </summary>
+        /// <param name="amount">Число, обозначающее кредит</param>
+        /// <returns>Сумма дебета и кредита</returns>
         public void Credit(double amount)
         {
             if (amount < 0)
